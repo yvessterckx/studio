@@ -23,7 +23,7 @@ The Studio serves the game and the playtest Kit from one origin. The Kit is serv
 Launch the Studio from the Game Project root, at the version `studio.json` pins: read its `"studio"` key (e.g. `1.x`) and put it in place of `<pin>`:
 
 ```sh
-npx github:TheClaessens/studio#semver:<pin> .
+npx github:yvessterckx/studio#semver:<pin> .
 ```
 
 It prints the Studio's URL, `http://localhost:<port>/__studio/` (port 5170 unless it is taken); the game itself is served at the root, `http://localhost:<port>/`. If the session has a preview browser, add that command as the one Studio entry in `.claude/launch.json` and start it from there, not from a shell. The project needs a `studio.json`; the playtest parts are:
@@ -45,7 +45,7 @@ It prints the Studio's URL, `http://localhost:<port>/__studio/` (port 5170 unles
 
 The Studio serves **mini-arena** at `/__studio/examples/mini-arena/`: a ~150-line 2D canvas survival game plus a complete ~90-line adapter (`/__studio/examples/mini-arena/adapter.js`). It covers pixel units, a custom choice UI, a named-damage digest, a custom stop, batches and a sandboxed save. Read it before writing your first adapter. It is also the Kit's **self-test**: `PT.init → PT.start → PT.play → PT.choose → PT.shot → PT.batch`. The expected result is that `expert` hands usually survive the 90 s and `casual` hands usually don't.
 
-`npx github:TheClaessens/studio#semver:<pin> check .` runs that self-test against *your* adapter (`play.adapter`, loaded on `play.entry`) in headless Chrome and names the step that fails.
+`npx github:yvessterckx/studio#semver:<pin> check .` runs that self-test against *your* adapter (`play.adapter`, loaded on `play.entry`) in headless Chrome and names the step that fails.
 
 ## Workflow
 

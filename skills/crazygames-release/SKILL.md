@@ -92,7 +92,7 @@ Then give the user an effort estimate split by Basic and Full Launch.
 
 ### 5. Store assets
 See `references/store-assets.md`. Produce three covers and two 18 s silent previews from the real game
-with the `game-promo-video` skill and the promo Kit (served by the Studio: `npx github:TheClaessens/studio#semver:<pin> .`,
+with the `game-promo-video` skill and the promo Kit (served by the Studio: `npx github:yvessterckx/studio#semver:<pin> .`,
 `<pin>` from studio.json). The landscape cover is frame 0 of the landscape video. Check each render with the
 Kit's `inspectMp4(promo.put, file)` from `/__studio/kits/promo/verify.js`.
 

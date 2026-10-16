@@ -18,7 +18,7 @@ playtest/          ← studio.json `playtests`
 
 If the project already keeps design docs elsewhere (e.g. `design/`), PERSONAS/BRIEF/personas/rounds can live there; point studio.json `playtests` at the folder that holds `PERSONAS.md`. The Kit is never in the project: the adapter imports it from `/__studio/kits/playtest/`.
 
-The Studio is the only server: `npx github:TheClaessens/studio#semver:<pin> .` from the Game Project root, `<pin>` being studio.json's `"studio"` (e.g. `1.x`). If the session has a preview browser, make that the one Studio entry in `.claude/launch.json` and start it from there, not from a shell.
+The Studio is the only server: `npx github:yvessterckx/studio#semver:<pin> .` from the Game Project root, `<pin>` being studio.json's `"studio"` (e.g. `1.x`). If the session has a preview browser, make that the one Studio entry in `.claude/launch.json` and start it from there, not from a shell.
 
 ## Before launch (orchestrator)
 1. Freeze the build: zip or tag it, and note the version in the round's REPORT header.

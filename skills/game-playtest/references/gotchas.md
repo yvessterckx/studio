@@ -14,7 +14,7 @@
   - Every persona creates its own tab and passes its `tabId` to every call. Omitting it acts on whichever tab is in front, which may be another agent's.
   - The pane hit its tab limit at roughly 8 concurrent agents. Keep panels at 7 or fewer, or run them in two waves.
 - **Tab screenshots can be stale or time out** while the pane is hidden or the page is busy. Canvas screenshots via `PT.shot` don't have this problem: they render a frame and upload it.
-- **One server, any OS.** The Studio (`npx github:TheClaessens/studio#semver:<pin> .`) needs only Node ≥ 26; there is no per-runtime kit server to pick.
+- **One server, any OS.** The Studio (`npx github:yvessterckx/studio#semver:<pin> .`) needs only Node ≥ 26; there is no per-runtime kit server to pick.
 
 ## Simulation speed
 - **Layout reads per tick are poison.** Reading `offsetParent`, `innerText` or `getBoundingClientRect` every tick forces a reflow after each DOM-updating frame. It cut sim speed by an order of magnitude.

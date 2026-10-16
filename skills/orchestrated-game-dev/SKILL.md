@@ -13,7 +13,7 @@ The phases below are the default. Skip or merge phases when the task is smaller,
 
 - Read the codebase's design docs, architecture/contract docs and memory first. Find the gameplay contracts that must not change (APIs, numbers, ids, save formats).
 - **Back up** before an overhaul: zip the current source into `backup/<name>-v<N>.zip`. It costs seconds and later doubles as an A/B baseline (§6).
-- Start the Studio, the one dev server (`npx github:TheClaessens/studio#semver:<pin> .`, `<pin>` = studio.json `"studio"`), and get a **baseline screenshot** of the current state in the browser/harness so you can compare later.
+- Start the Studio, the one dev server (`npx github:yvessterckx/studio#semver:<pin> .`, `<pin>` = studio.json `"studio"`), and get a **baseline screenshot** of the current state in the browser/harness so you can compare later.
 - Unless the user asked to be consulted, run autonomously: they want a finished result, not check-ins. Still give short status lines between long waits.
 
 ## 1. Design (for new games or redesigns): audit + named passes

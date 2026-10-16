@@ -55,7 +55,7 @@ test("skill templates load Kits the Studio serves, the promo shims as a classic 
 
 test('skills that need the Studio launch it with npx at the pin from studio.json', () => {
   for (const name of ['game-playtest', 'game-promo-video', 'crazygames-release']) {
-    assert.match(read(`skills/${name}/SKILL.md`), /npx github:TheClaessens\/studio#semver:<pin>/, name);
+    assert.match(read(`skills/${name}/SKILL.md`), /npx github:yvessterckx\/studio#semver:<pin>/, name);
   }
   for (const name of SKILLS) {
     for (const f of files(`skills/${name}`)) assert.doesNotMatch(read(f), /#semver:\d/, `${f} hardcodes a version instead of the studio.json pin`);
